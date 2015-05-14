@@ -14,6 +14,7 @@ http://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 ### GitHub client
 
 https://windows.github.com/
+
 https://mac.github.com/
 
 #### Comparing versions
@@ -25,6 +26,11 @@ http://winmerge.org/
 Or meld (linux, mac, windows):
 
 http://meldmerge.org/
+
+You can download the meld package for mac here:
+
+https://github.com/yousseb/meld/releases
+
 
 
 * * * 
@@ -149,6 +155,35 @@ http://meldmerge.org/
     git push common local_branch:remote_branch
     ```
     
+##### Resolving conflicts
+
+13. In many scenarios git will tell you that you can't push your changes because the remote repository have new  
+    commits that are not reflected in your local copy. Basically, this happens when there has been an update in the   
+    common repository that you still don't have. Then, you need to be up-to-date first by pulling from the common repo     first:
+
+   ```
+   git pull common master
+   ```
+   
+   This will automatically pull the newest version from the common repository and try to **merge** this version with     your working copy. If an automatic merge cannot be achieved, you need to resolve merge conflicts manually. 
+   
+   The conflicts will be *anotated* in novel.txt. Please read this link on how to resolve merging conflicts from the  
+   command line:
+
+    https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/
+    
+    NOTE:
+    -----
+    You can also resolve meging conflicts using differet graphical user interface tools like KDiff3 or Meld:
+    
+    http://www.gitguys.com/topics/merging-with-a-gui/
+    
+    
+ ##### Where to go from here?
+ 
+ Now that we have covered the basics of Git/GitHub, we invite you to take on the following online tutorial:
+ 
+ https://try.github.io/levels/1/challenges/1
     
     
     
